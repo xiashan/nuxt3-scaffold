@@ -1,17 +1,35 @@
 {
-  "name": "nuxt-app",
-  "private": true,
+  "name": "create-nuxt3-scaffold",
+  "version": "1.0.0",
+  "description": "A modern Nuxt 3 scaffold with best practices and optimized configuration",
   "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+  "bin": {
+    "create-nuxt3-scaffold": "bin/create-nuxt3-scaffold.js"
   },
-  "dependencies": {
-    "nuxt": "^3.17.6",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+  "files": [
+    "bin",
+    "template"
+  ],
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "scaffold",
+    "template",
+    "create-nuxt-app",
+    "starter",
+    "boilerplate"
+  ],
+  "author": "xiashan",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiashan/nuxt3-scaffold.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiashan/nuxt3-scaffold/issues"
+  },
+  "homepage": "https://github.com/xiashan/nuxt3-scaffold#readme",
+  "engines": {
+    "node": ">=18.0.0"
   }
-}
+} 
