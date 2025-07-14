@@ -1,0 +1,17 @@
+.el-button.is-disabled,
+.el-button.is-disabled:hover {
+  --el-button-disabled-bg-color: #d7dce4;
+  --el-button-disabled-border-color: #d7dce4;
+}
+
+.el-table {
+  color: var(--text-color-primary) !important;
+}
+
+.el-select .el-select__wrapper {
+  background-color: var(--fill-color-light);
+}
+
+.tooltip-w-240 {
+  max-width: 240px;
+}

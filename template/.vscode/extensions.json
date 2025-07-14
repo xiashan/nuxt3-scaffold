@@ -1,0 +1,29 @@
+{
+  "recommendations": [
+    "antfu.iconify",
+    "vunguyentuan.vscode-css-variables",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "lokalise.i18n-ally",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "cweijan.vscode-redis-client",
+    "Nuxtr.nuxtr-vscode",
+    "stylelint.vscode-stylelint",
+    "Gruntfuggly.todo-tree",
+    "vscode-icons-team.vscode-icons",
+    "Vue.volar",
+    "Alibaba-Cloud.tongyi-lingma",
+    "esbenp.prettier-vscode",
+    "CuiHp.iconfont-sync",
+    "pw-super-tinypng.pw-super-tinypng",
+    "naumovs.color-highlight",
+    "donjayamanne.githistory",
+    "codezombiech.gitignore",
+    "oderwat.indent-rainbow",
+    "mskelton.npm-outdated",
+    "Zignd.html-css-class-completion",
+    "n3rds-inc.image",
+    "kisstkondoros.vscode-gutter-preview"
+  ]
+}

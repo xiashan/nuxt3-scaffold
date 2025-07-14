@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+p,
+pre,
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+pre {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: none;
+}

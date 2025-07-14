@@ -1,0 +1,27 @@
+:root {
+  --color-primary: var(--el-color-primary, #f50);
+  --color-success: var(--el-color-success, #04aa5a);
+  --color-primary-weak: #ffaa08;
+  --color-danger: var(--el-color-danger);
+  --text-color-primary: var(--el-text-color-primary, #101c32);
+  --text-color-secondary: var(--el-text-color-secondary, #7d849b);
+  --fill-color-light: var(--el-fill-color-light, #f4f5f7);
+  --border-color: var(--el-border-color, #dcdcdc);
+  --font-size-extra-small: var(--el-font-size-extra-small, 12px);
+  --font-size-small: var(--el-font-size-small, 13px);
+  --font-size-base: var(--el-font-size-base, 14px);
+  --font-size-medium: var(--el-font-size-medium, 16px);
+  --font-size-h1: 48px;
+  --font-size-large: var(--el-font-size-large, 18px);
+  --font-size-extra-large: var(--el-font-size-extra-large, 20px);
+  --bg-color: var(--el-bg-color, #fff);
+  --text-color-gradient-primary: linear-gradient(
+    90deg,
+    var(--color-primary-weak) 0%,
+    var(--color-primary) 100%
+  );
+  --fill-color-gradient: linear-gradient(90deg, #ffaa081a, #ff55001a);
+  --font-family:
+    system-ui, -apple-system, blinkmacsystemfont, "segoe ui", roboto, helvetica,
+    arial, sans-serif, "apple color emoji", "segoe ui emoji", "segoe ui symbol";
+}

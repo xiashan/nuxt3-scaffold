@@ -1,0 +1,110 @@
+@import "reset.css";
+@import "variables.css";
+@import "./override/elementPlus.css";
+
+.ai-icon,
+.ai-color {
+  font-size: inherit;
+}
+
+html {
+  min-width: 720px;
+  font-family: var(--font-family);
+}
+
+html[lang="zh-CN"] {
+  font-family: AlibabaPuHuiTi, var(--font-family);
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+}
+/* stylelint-disable-next-line selector-id-pattern */
+#__nuxt {
+  position: relative;
+  height: 100vh;
+}
+
+@font-face {
+  font-family: AlibabaPuHuiTi;
+  font-style: normal;
+  font-weight: normal;
+  src: url("/fonts/AlibabaPuHuiTi-3-55-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.25s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition: all 0.25s ease-out;
+}
+
+.slide-left-enter-from {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.slide-left-leave-to {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+/* tooltip定制 样式 */
+.el-popper.is-customized {
+  padding: 5px 8px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+}
+
+/* 隐藏滚动条 */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* 或者直接不显示 */
+  width: 0; /* 隐藏横向滚动条 */
+  height: 0; /* 隐藏纵向滚动条 */
+}
+
+.transparent-modal {
+  background-color: rgb(0 0 0 / 0%) !important;
+}
+
+.m-w-240 {
+  max-width: 240px;
+}
+
+.v-a-top {
+  vertical-align: top;
+}

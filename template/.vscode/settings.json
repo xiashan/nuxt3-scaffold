@@ -1,0 +1,79 @@
+{
+    "editor.formatOnSave": true,
+    "i18n-ally.localesPaths": [
+        "i18n/locales"
+    ],
+    // "files.associations": {
+    //     "*.css": "tailwindcss"
+    // },
+    "editor.quickSuggestions": {
+        "strings": true,
+        "other": "on",
+        "comments": "on"
+    },
+    "i18n-ally.keystyle": "nested",
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        // "dist/*":true
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "invalid.illegal.character-not-allowed-here.html",
+                "settings": {
+                    "foreground": "#888"
+                }
+            }
+        ]
+    },
+    "editor.codeActionsOnSave": {
+        "source.fixAll.stylelint": "explicit",
+        "source.fixAll.eslint": "explicit"
+    },
+    "stylelint.snippet": [
+        "css",
+        "postcss",
+        "vue",
+        "less",
+        "scss"
+    ],
+    "stylelint.validate": [
+        "css",
+        "postcss",
+        "less",
+        "scss",
+        "sass",
+        "vue",
+    ],
+    "cssVariables.languages": [
+        "astro",
+        "svelte",
+        "vue",
+        "vue-html",
+        "vue-postcss",
+        "scss",
+        "postcss",
+        "less",
+        "css",
+        "html",
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "source.css.styled",
+    ],
+    "cssVariables.lookupFiles": [
+        "**/*.css",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.less",
+        "node_modules/element-plus/theme-chalk/index.css"
+    ],
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "i18n-ally.sourceLanguage": "zh-CN",
+    "color-highlight.markerType": "dot-before"
+}
