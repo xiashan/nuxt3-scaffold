@@ -1,6 +1,6 @@
 {
   "name": "create-nuxt3-scaffold",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern Nuxt 3 scaffold with best practices and optimized configuration",
   "type": "module",
   "bin": {
