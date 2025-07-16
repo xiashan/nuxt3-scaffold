@@ -1,0 +1,85 @@
+<template>
+  <el-header>
+    <div class="container">
+      <!--logo-->
+      <NuxtLinkLocale class="logo" to="/">
+        <img src="~/assets/images/google_logo.svg" alt="logo" />
+      </NuxtLinkLocale>
+      <!--language-->
+      <el-dropdown
+        class="language-dropdown"
+        placement="bottom-start"
+        popper-class="language-popper"
+        :teleported="false"
+        trigger="click"
+      >
+        <el-button>
+          {{ LanguageMap[locale] }}
+          <el-icon class="el-icon--right"><ElIconArrowDown /></el-icon>
+        </el-button>
+        <template #dropdown>
+          <el-dropdown-menu>
+            <el-dropdown-item v-for="item in locales" :key="item.code">
+              <NuxtLink
+                @click="
+                  reloadNuxtApp({
+                    force: true,
+                    path: switchLocalePath(item.code),
+                  })
+                "
+              >
+                {{ LanguageMap[item.code] }}
+              </NuxtLink>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </template>
+      </el-dropdown>
+    </div>
+  </el-header>
+</template>
+<script setup lang="ts">
+import { LanguageMap } from "~/assets/scripts/constant/language";
+
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
+</script>
+<style lang="scss" scoped>
+.el-header {
+  --el-header-height: 56px;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: hsl(0deg 0% 100% / 80%);
+  background-size: auto;
+  backdrop-filter: blur(6px);
+
+  .container {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding: 0 100px;
+  }
+
+  .logo {
+    display: inline-block;
+    width: 92px;
+    height: 30px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  @media (width <= 1440px) {
+    .container {
+      padding: 0;
+    }
+  }
+}
+</style>

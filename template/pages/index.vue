@@ -2,12 +2,20 @@
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-07-14 15:40:30
  * @LastEditors: xiashan xiashan@noxgroup.com
- * @LastEditTime: 2025-07-14 15:41:25
+ * @LastEditTime: 2025-07-16 20:03:45
  * @FilePath: /nuxt3-scaffold/template/pages/index.vue
- * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @Description: 
 -->
 <template>
-  <div>
-    <h1>Hello World</h1>
+  <div class="page-container">
+    <h1>{{ $t("helloIam", ["xiashan"]) }}</h1>
   </div>
 </template>
+<script setup lang="ts"></script>
+<style scoped lang="scss">
+.page-container {
+  margin: 0 auto;
+  max-width: 720px;
+  text-align: center;
+}
+</style>

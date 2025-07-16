@@ -1,12 +1,10 @@
 /*
- * @Author: lishaonan lishaonan@noxgroup.com
- * @Date: 2025-03-17 20:15:53
- * @LastEditors: lishaonan lishaonan@noxgroup.com
- * @LastEditTime: 2025-03-28 11:10:18
- * @FilePath: /ai-robot/eslint.config.mjs
+ * @Author: xiashan xiashan@noxgroup.com
+ * @Date: 2025-07-14 11:08:21
+ * @LastEditors: xiashan xiashan@noxgroup.com
+ * @LastEditTime: 2025-07-16 19:42:52
+ * @FilePath: /nuxt3-scaffold/template/eslint.config.mjs
  * @Description:
- *
- * Copyright (c) 2025 by NoxGroup, All Rights Reserved.
  */
 // @ts-check
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";

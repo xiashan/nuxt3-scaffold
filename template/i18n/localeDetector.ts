@@ -1,12 +1,10 @@
 /*
- * @Author: lishaonan lishaonan@noxgroup.com
- * @Date: 2025-03-20 10:28:40
- * @LastEditors: lishaonan lishaonan@noxgroup.com
- * @LastEditTime: 2025-04-27 11:58:09
- * @FilePath: /ai-robot/i18n/localeDetector.ts
+ * @Author: xiashan xiashan@noxgroup.com
+ * @Date: 2025-07-14 10:07:11
+ * @LastEditors: xiashan xiashan@noxgroup.com
+ * @LastEditTime: 2025-07-16 19:37:38
+ * @FilePath: /nuxt3-scaffold/template/i18n/localeDetector.ts
  * @Description:
- *
- * Copyright (c) 2025 by NoxGroup, All Rights Reserved.
  */
 // Detect based on query, cookie, header
 export default defineI18nLocaleDetector((event, config) => {

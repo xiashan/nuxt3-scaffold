@@ -47,12 +47,11 @@ function copyDir(src, dest) {
 
 // Copy template files
 console.log(`Creating a new Nuxt3 project in ${projectDir}...`);
-fs.mkdirSync(path.join(projectDir, 'template'), { recursive: true });
 copyDir(templateDir, projectDir);
 
 // Initialize git repository
-console.log('Initializing git repository...');
-execSync('git init', { cwd: projectDir });
+// console.log('Initializing git repository...');
+// execSync('git init', { cwd: projectDir });
 
 console.log('Installing dependencies...');
 execSync('npm install', { cwd: projectDir, stdio: 'inherit' });
