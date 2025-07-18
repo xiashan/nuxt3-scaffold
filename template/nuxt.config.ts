@@ -35,9 +35,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     oauth: {
       google: {
-        clientId:
-          "1010482379297-q7jp0g0jouu7aldm5g76ndsf45lkm1s6.apps.googleusercontent.com",
-        clientSecret: "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",
+        clientId: "your client id",
+        clientSecret: "your client secret",
       },
     },
     private: {
@@ -66,9 +65,7 @@ export default defineNuxtConfig({
       },
     },
   },
-  css: [
-    "@/assets/css/main.css",
-  ],
+  css: ["@/assets/css/main.css"],
   compatibilityDate: "2025-07-14",
   devtools: { enabled: true },
   modules: [
@@ -86,11 +83,10 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
   ],
   gtag: {
-    id: "G-TKS3MGXWTH",
+    id: "your gtag id",
   },
   googleSignIn: {
-    clientId:
-      "1010482379297-q7jp0g0jouu7aldm5g76ndsf45lkm1s6.apps.googleusercontent.com",
+    clientId: "your client id",
   },
   piniaPluginPersistedstate: {
     // @ts-expect-error key 配置中不提示，请忽略，不要删除
