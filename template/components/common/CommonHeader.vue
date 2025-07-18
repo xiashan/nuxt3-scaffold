@@ -1,3 +1,11 @@
+<!--
+ * @Author: xiashan xiashan@noxgroup.com
+ * @Date: 2025-06-17 13:51:02
+ * @LastEditors: xiashan xiashan@noxgroup.com
+ * @LastEditTime: 2025-07-18 14:46:08
+ * @FilePath: /nuxt3-scaffold/template/components/common/CommonHeader.vue
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
 <template>
   <el-header>
     <div class="container">
@@ -6,34 +14,42 @@
         <img src="~/assets/images/google_logo.svg" alt="logo" />
       </NuxtLinkLocale>
       <!--language-->
-      <el-dropdown
-        class="language-dropdown"
-        placement="bottom-start"
-        popper-class="language-popper"
-        :teleported="false"
-        trigger="click"
-      >
-        <el-button>
-          {{ LanguageMap[locale] }}
-          <el-icon class="el-icon--right"><ElIconArrowDown /></el-icon>
+      <div>
+        <el-dropdown
+          class="language-dropdown"
+          placement="bottom-start"
+          popper-class="language-popper"
+          :teleported="false"
+          trigger="click"
+        >
+          <el-button>
+            {{ LanguageMap[locale] }}
+            <el-icon class="el-icon--right"><ElIconArrowDown /></el-icon>
+          </el-button>
+          <template #dropdown>
+            <el-dropdown-menu>
+              <el-dropdown-item v-for="item in locales" :key="item.code">
+                <NuxtLink
+                  @click="
+                    reloadNuxtApp({
+                      force: true,
+                      path: switchLocalePath(item.code),
+                    })
+                  "
+                >
+                  {{ LanguageMap[item.code] }}
+                </NuxtLink>
+              </el-dropdown-item>
+            </el-dropdown-menu>
+          </template>
+        </el-dropdown>
+        <el-button
+          style="margin-left: 16px"
+          @click="authStore.isAuthModalShow = true"
+        >
+          登录
         </el-button>
-        <template #dropdown>
-          <el-dropdown-menu>
-            <el-dropdown-item v-for="item in locales" :key="item.code">
-              <NuxtLink
-                @click="
-                  reloadNuxtApp({
-                    force: true,
-                    path: switchLocalePath(item.code),
-                  })
-                "
-              >
-                {{ LanguageMap[item.code] }}
-              </NuxtLink>
-            </el-dropdown-item>
-          </el-dropdown-menu>
-        </template>
-      </el-dropdown>
+      </div>
     </div>
   </el-header>
 </template>
@@ -42,6 +58,14 @@ import { LanguageMap } from "~/assets/scripts/constant/language";
 
 const { locale, locales } = useI18n();
 const switchLocalePath = useSwitchLocalePath();
+const authStore = useAuthStore();
+const { loggedIn, user, clear: logout } = useUserSession();
+
+const onClickLogout = () => {
+  logout().then(() => {
+    window.location.reload();
+  });
+};
 </script>
 <style lang="scss" scoped>
 .el-header {

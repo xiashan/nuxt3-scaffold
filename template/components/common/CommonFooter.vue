@@ -2,7 +2,7 @@
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-06-16 17:19:02
  * @LastEditors: xiashan xiashan@noxgroup.com
- * @LastEditTime: 2025-07-16 19:22:57
+ * @LastEditTime: 2025-07-18 14:41:20
  * @FilePath: /nuxt3-scaffold/template/components/common/CommonFooter.vue
  * @Description: 
 -->
@@ -15,13 +15,9 @@
       <el-divider />
       <div class="link-list">
         <span class="copy-right">© 2025</span>
-        <NoLinkLocale href="/privacy-policy" target="_blank">
-          {{ $t("privacy") }}
-        </NoLinkLocale>
+        <a href="/privacy-policy" target="_blank"> 隐私条款 </a>
         <el-divider direction="vertical" />
-        <NoLinkLocale href="/terms" target="_blank">
-          {{ $t("terms") }}
-        </NoLinkLocale>
+        <a href="/terms" target="_blank"> 服务协议 </a>
       </div>
     </div>
   </el-footer>
