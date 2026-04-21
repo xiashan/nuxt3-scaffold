@@ -1,9 +1,8 @@
 /*
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-03-25 14:01:09
- * @LastEditors: xiashan xiashan@noxgroup.com
- * @LastEditTime: 2025-07-21 10:27:48
- * @FilePath: /ai-robot/plugins/markdown.ts
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2026-04-21 15:23:09
  * @Description:
  */
 import { defineNuxtPlugin } from "#app";

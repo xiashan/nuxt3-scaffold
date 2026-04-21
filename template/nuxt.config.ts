@@ -1,4 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+const ALLOWED_CORS_ORIGINS: string[] = [
+  "https://kflx.ai",
+  "https://www.kflx.ai",
+  "https://huidu.kflx.ai/",
+  "http://127.0.0.1:3435",
+  "http://localhost:3435",
+];
+
 export default defineNuxtConfig({
   app: {
     head: {
@@ -18,10 +26,21 @@ export default defineNuxtConfig({
       websocket: true,
     },
   },
+  routeRules: {
+    "/**": {
+      headers: {
+        "Content-Security-Policy": "frame-ancestors 'self'",
+        "X-Frame-Options": "SAMEORIGIN",
+      },
+    },
+  },
   features: {
     inlineStyles: () => {
       return false;
     },
+  },
+  experimental: {
+    appManifest: false,
   },
   devServer: {
     port: 3435,
@@ -48,16 +67,18 @@ export default defineNuxtConfig({
         clientId: "",
         clientSecret: "",
       },
-      redis: {
-        host: "",
-        password: "",
-      },
+    },
+    security: {
+      allowOptionsMethod: process.env.NUXT_SECURITY_ALLOW_OPTIONS === "true",
+    },
+    public: {
+      csrfCookieName: "",
     },
     session: {
-      maxAge: 60 * 60 * 24 * 7,
+      maxAge: 60 * 60 * 24 * 365,
       // maxAge: 60,
       name: "scaffold-session",
-      password: "",
+      password: process.env.NUXT_SESSION_PASSWORD || "",
       cookie: {
         sameSite: "lax",
         domain: process.env.NODE_ENV === "development" ? "" : ".miniwork.ai",
@@ -66,7 +87,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/main.css"],
-  compatibilityDate: "2025-07-14",
+  compatibilityDate: "2026-04-21",
   devtools: { enabled: true },
   modules: [
     "@pinia/nuxt",
@@ -79,8 +100,6 @@ export default defineNuxtConfig({
     "nuxt-gtag",
     "pinia-plugin-persistedstate",
     "nuxt-vue3-google-signin",
-    "@nuxtjs/robots",
-    "@nuxtjs/sitemap",
   ],
   gtag: {
     id: "your gtag id",
@@ -98,6 +117,10 @@ export default defineNuxtConfig({
   vite: {
     server: {
       allowedHosts: [".miniwork.ai"],
+      cors: {
+        origin: ALLOWED_CORS_ORIGINS,
+        credentials: true,
+      },
     },
     css: {
       preprocessorOptions: {
@@ -115,13 +138,6 @@ export default defineNuxtConfig({
     icon: "ElIcon",
     injectionID: { prefix: 100, current: 1 },
     globalConfig: { size: "default", zIndex: 1000 },
-  },
-  sitemap: {
-    sources: ["/api/__sitemap__/urls"],
-    exclude: ["/test", "/test/**", "/ws"],
-  },
-  robots: {
-    // disallow: ["/console/"],
   },
   i18n: {
     compilation: {

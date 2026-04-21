@@ -2,8 +2,7 @@
  * @Author: lishaonan lishaonan@noxgroup.com
  * @Date: 2025-04-21 11:14:39
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2026-04-21 11:42:25
- * @FilePath: /ai-robot/components/layout/LayoutConsoleAside.vue
+ * @LastEditTime: 2026-04-21 15:22:53
  * @Description: 控制台侧边栏
  *
  * Copyright (c) 2025 by NoxGroup, All Rights Reserved.

@@ -2,7 +2,7 @@
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-06-03 10:48:50
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2026-04-21 10:42:09
+ * @LastEditTime: 2026-04-21 15:18:53
  * @FilePath: /nuxt3-scaffold/template/deploy/ecosystem.config.cjs
  * @Description:
  */
@@ -22,6 +22,7 @@ module.exports = {
         NUXT_PRIVATE_CAS_BASE_URL: "",
         NUXT_PRIVATE_CAS_CLIENT_ID: "",
         NUXT_PRIVATE_CAS_CLIENT_SECRET: "",
+        NUXT_PUBLIC_CSRF_COOKIE_NAME: "***_csrf",
       },
       env_pre: {
         CONFIG_ENV: "preview",
@@ -31,6 +32,7 @@ module.exports = {
         NUXT_PRIVATE_CAS_BASE_URL: "",
         NUXT_PRIVATE_CAS_CLIENT_ID: "",
         NUXT_PRIVATE_CAS_CLIENT_SECRET: "",
+        NUXT_PUBLIC_CSRF_COOKIE_NAME: "***_csrf",
       },
     },
   ],

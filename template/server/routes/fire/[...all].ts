@@ -2,8 +2,7 @@
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-05-07 10:12:00
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2026-04-21 11:07:19
- * @FilePath: /nuxt3-scaffold/template/server/routes/robot/[...all].ts
+ * @LastEditTime: 2026-04-21 15:23:16
  * @Description:
  */
 
