@@ -1,8 +1,8 @@
 /*
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-05-07 10:12:00
- * @LastEditors: xiashan xiashan@noxgroup.com
- * @LastEditTime: 2025-07-16 19:55:40
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2026-04-21 11:07:19
  * @FilePath: /nuxt3-scaffold/template/server/routes/robot/[...all].ts
  * @Description:
  */
@@ -18,13 +18,12 @@ export default defineEventHandler(async (event) => {
   lang = lang || (await event.context._i18nLocale!());
   return createProxyEventHandler({
     target: target,
-    pathFilter: ["/robot/**"],
+    pathFilter: ["/fire/**"],
     enableLogger: process.env.NODE_ENV !== "production",
     configureProxyRequest: () => {
       return {
         headers: {
-          client_id: config.private.cas.clientId,
-          user_id: user?.id ?? "",
+          Authorization: `Bearer ${user?.access_token ?? ""}`,
           lan_code: lang,
         },
       };

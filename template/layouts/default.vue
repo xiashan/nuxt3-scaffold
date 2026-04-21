@@ -1,18 +1,18 @@
 <!--
  * @Author: xiashan xiashan@noxgroup.com
  * @Date: 2025-07-14 10:11:11
- * @LastEditors: xiashan xiashan@noxgroup.com
- * @LastEditTime: 2025-07-16 19:05:14
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2026-04-21 11:37:40
  * @FilePath: /nuxt3-scaffold/template/layouts/default.vue
  * @Description: 
 -->
 <template>
   <el-container class="layout-container" direction="vertical">
-    <common-header></common-header>
+    <layout-header></layout-header>
     <el-main>
       <slot></slot>
     </el-main>
-    <common-footer></common-footer>
+    <layout-footer></layout-footer>
   </el-container>
 </template>
 

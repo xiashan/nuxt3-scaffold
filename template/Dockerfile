@@ -1,0 +1,6 @@
+FROM registry-vpc.cn-hongkong.aliyuncs.com/bignox_yeshen/nox_node:22.14.0-alpine3.21
+COPY kairo-fe.tgz /home 
+RUN tar xzf /home/kairo-fe.tgz -C /home && rm -rf /home/kairo-fe.tgz
+WORKDIR /home/
+EXPOSE 3435
+CMD npm run prod && pm2 logs

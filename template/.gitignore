@@ -4,6 +4,7 @@
 .nuxt
 .nitro
 .cache
+.vscode
 dist
 
 # Node dependencies
@@ -19,3 +20,7 @@ logs
 .idea
 
 package-lock.json
+
+buildTools/i18n/*.xlsx
+.worktrees
+.superpowers

@@ -1,3 +1,4 @@
 {
-  "helloIam": "Hi, I am {0}"
+  "helloIam": "Hi, I am {0}",
+  "noResult": "No related results"
 }
